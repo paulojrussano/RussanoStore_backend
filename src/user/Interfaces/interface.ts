@@ -1,7 +1,9 @@
-export interface CreateUserDto{
+export interface User{
+    id: number
     name: String
     email:String
     phone:String
     cpf:String
-    password: string
+    password:String
 }
+
