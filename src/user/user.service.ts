@@ -5,6 +5,12 @@ import { hash } from 'bcrypt';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
+//nao esquecer
+//git status
+//git add .
+//git commit -m "feat: texto"
+//git push
+
 @Injectable()
 export class UserService {
     
@@ -21,6 +27,7 @@ export class UserService {
 
         return this.userRepository.save({//gravando user 
             ...CreateUserDto,
+            type_user: 1,
             password: passwdhash,
 
         })
@@ -33,3 +40,4 @@ export class UserService {
 
 
 }
+
