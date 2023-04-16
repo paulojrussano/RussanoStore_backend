@@ -4,6 +4,9 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { dirname } from 'path/posix';
 import { Migration } from 'typeorm';
+import { StateModule } from './state/state.module';
+import { CityModule } from './city/city.module';
+import { AddressModule } from './address/address.module';
 
 
 @Module({
@@ -23,7 +26,10 @@ import { Migration } from 'typeorm';
       migrations:[`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true,
     }),
-    UserModule, 
+    UserModule,
+    StateModule,
+    CityModule,
+    AddressModule, 
   ],
   controllers: [],
   providers: [],
